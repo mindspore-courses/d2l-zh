@@ -1199,7 +1199,9 @@ def show_trace_2d(f, results):
 
 abs = ops.abs
 arange = ops.arange
+cat = ops.cat
 concat = ops.concat
+int32 = mindspore.int32
 float32 = mindspore.float32
 ones = ops.ones
 zeros = ops.zeros
@@ -1230,3 +1232,5 @@ normal = lambda shape, mean, stddev, *args : ops.normal(shape, tensor(mean), ten
 reduce_sum = lambda x, *args, **kwargs: x.sum(*args, **kwargs)
 reshape = lambda x, *args, **kwargs: x.reshape(*args, **kwargs)
 transpose = lambda x, *args, **kwargs: x.t(*args, **kwargs)
+size = lambda x, *args, **kwargs: x.numel(*args, **kwargs)
+astype = lambda x, *args, **kwargs: x.astype(*args, **kwargs)
